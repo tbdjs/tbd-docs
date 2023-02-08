@@ -16,12 +16,12 @@
   },
   "topbarCtaButton": {
     "name": "Get Early Access",
-    "url": "https://nubohq.typeform.com/to/Iq00G4no"
+    "url": "https://tbd.sh"
   },
   "topbarLinks": [
     {
       "name": "Home",
-      "url": "https://nubo.app/"
+      "url": "https://tbd.sh"
     }
   ],
   "anchors": [
@@ -63,8 +63,7 @@
   ],
   "backgroundImage": "/images/background.png",
   "footerSocials": {
-    "website": "https://nubo.app/",
-    "twitter": "https://twitter.com/NuboHQ",
-    "medium": "https://medium.com/nubohq"
+    "website": "https://tbd.sh",
+    "github": "https://github.com/tbdjs"
   }
 }
