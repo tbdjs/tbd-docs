@@ -1,0 +1,15 @@
+---
+title: "What about MongoDB Atlas?"
+---
+
+MongoDB Atlas now has an option to globally distribute your data. This data
+replication is only eventually consistent, which means that there is no data
+consistency guarantee when reading from different regions.
+
+I also don't recommend going with NoSQL as your main data source. The structure
+that is provided by relational databases with the type safety from tools such as
+Prisma, is the best way to manage the data for your applications. For me, the
+argument between NoSQL and relational databases is similar to the argument
+between JavaScript and TypeScript. One allows you to do whatever you want (NoSQL
+/ JavaScript), the other provides structure and safety for you to build large
+applications (relational database / TypeScript).

@@ -1,0 +1,39 @@
+---
+title: "Add List Items"
+api: "POST /lists/{pluralName}"
+---
+
+### Parameters
+
+<ParamField path="pluralName" type="string" required>
+  Plural name of the list (e.g. users, cars)
+</ParamField>
+
+### Body
+
+<ParamField body="data" type="array" required>
+  Array of list items to be added
+</ParamField>
+
+<ResponseExample>
+```json
+[
+    {
+        "id": "a3049133db07855118856170",
+        "created": 1647254580707,
+        "updated": 1647254580707,
+        "name": "John Smith",
+        "email": "john@nubo.dev",
+        "age": 25
+    },
+    {
+        "id": "7f1ab4142a0379092916eb48",
+        "created": 1647254580707,
+        "updated": 1647254580707,
+        "name": "Jack Smith",
+        "email": "jack@nubo.dev",
+        "age": 20
+    }
+]
+```
+</ResponseExample>

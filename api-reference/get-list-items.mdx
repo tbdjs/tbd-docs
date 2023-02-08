@@ -1,0 +1,61 @@
+---
+title: "Get List Items"
+api: "GET /lists/{pluralName}"
+---
+
+### Parameters
+
+<ParamField path="pluralName" type="string" required>
+  Plural name of the list (e.g. users, cars)
+</ParamField>
+
+<ParamField query="pageSize" type="number">
+  Total results per page
+</ParamField>
+
+<ParamField query="page" type="number">
+  Page number
+</ParamField>
+
+<ParamField query="filter.x" type="any">
+  Filter by a field (e.g. filter.age=20)
+</ParamField>
+
+<ParamField query="orderBy.x" type="asc | desc">
+  Order by a field (e.g. orderByAge=desc)
+</ParamField>
+
+<ResponseExample>
+
+```json
+{
+    "users": [
+        {
+            "id": "a3049133db07855118856170",
+            "created": 1647254580707,
+            "updated": 1647254580707,
+            "name": "John Smith",
+            "email": "john@nubo.dev",
+            "age": 25
+        },
+        {
+            "id": "7f1ab4142a0379092916eb48",
+            "created": 1647254580707,
+            "updated": 1647254580707,
+            "name": "Jack Smith",
+            "email": "jack@nubo.dev",
+            "age": 20
+        }
+    ],
+    "pagination": {
+        "total": 2,
+        "pages": 1,
+        "firstPage": true,
+        "lastPage": true,
+        "page": 1,
+        "pageSize": 10
+    }
+}
+```
+
+</ResponseExample>
