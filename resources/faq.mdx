@@ -1,0 +1,120 @@
+---
+sidebarTitle: "FAQs"
+title: "Frequently Asked Questions"
+---
+
+<AccordionGroup>
+
+<Accordion title="Is all this speed really necessary?">
+
+Short answer, yes. There have been many studies that show a correlation between
+slow response times on websites, and users leaving a website and even loss of
+potential revenue.
+
+When I worked at Amazon, we had to make sure that any advertisements we designed
+would not exceed a certain size. This was to ensure that the site performed
+well, so as not to impact user experience, and ultimately loss in sales.
+
+</Accordion>
+
+<Accordion title="Why TypeScript?">
+
+Because no one should code in plain JavaScript anymore. Seriously. Stop it.
+
+</Accordion>
+
+<Accordion title="Why Bun and Deno?">
+
+Bun is just amazing. It's almost become a drop-in replacement for Node, but with
+so many benefits that make it ready for the edge, such as fast startup times,
+built-in TypeScript support, and extremely fast installs (goodbye long builds).
+
+Deno is also coming up fast in the TypeScript community. It will have a longer
+journey for adoption (although this has been shortened with NPM support), but
+it's a really great way to build smaller scripts and even applications with
+TypeScript.
+
+</Accordion>
+
+<Accordion title="Why strong data consistency?">
+
+The challenge with globally distributed data, is that you need to find a way to
+make sure that when it's requested from various locations around the world, each
+user has the most up to date version of that data. Eventual consistency means
+that you could end up in a situation where you have a write to your database in
+one region, and a read with stale data from another region. For many use cases
+this is not a problem. However, for applications such as e-commerce sites, you
+need to make sure that the stock count is accurately reflected everywhere. This
+is where strong consistency is required. It means that if there is an updated
+record in your database, you can be sure that anyone reading that value from
+around the world gets the latest version of that record.
+
+The tradeoff here is that writes can take just a bit longer to complete. This is
+why Nubo SQL gives you the option to have strong consistency with slightly
+longer writes, or eventual consistency with fast writes and slightly longer
+global replication. You can choose the strategy that suits your requirements.
+
+</Accordion>
+
+<Accordion title="Why MySQL compatibility?">
+
+When a new database comes out with features such as high scalability, global
+data access, etc., I first assess what the effort will be for me to use this
+tech in my applications. It's always great to have the option to move your
+applications between platforms. For example, let's say you built your startup's
+application using Cloudflare Workers KV (Cloudflare's global data store). Now
+your startup has grown, and you have more complex querying requirements that go
+beyond what KV is able to offer. The migration from KV to something like MySQL
+can be a nightmare (depending on how tightly integrated your application is with
+KV). Therefore, it's always best to choose tech that allows you to move to
+another platform with minimal or, ideally, no changes to your codebase.
+
+This is why Nubo SQL is wire compatible with MySQL. No need to learn some new
+proprietary query language. It's just MySQL. Many developers already know MySQL,
+or if you're using PostgreSQL, it's very easy to port to MySQL. Another benefit
+of this is that it allows you to use Prisma!
+
+</Accordion>
+
+<Accordion title="Why Prisma support?">
+
+The tools I use as a developer are very important to me. They not only help me
+to develop faster, but provide a host of other benefits that I don't want to
+compromise on. Prisma is the best way to have type safe access to your database,
+perform migrations, seed data, and more. You can even generate a prisma schema
+from an existing database. This is why support for Prisma is a must.
+
+Something to note is that Prisma itself is not designed to work well at the
+edge, which is why Prisma created their Data Proxy. This allows you to deploy a
+light version of Prisma with your edge application, then send queries to the
+Data Proxy, which in turn proxies the requests to your database. However,
+Prisma's Data Proxy is only available in two regions - Frankfurt, Germany and N.
+Virginia, USA. This is not ideal if your code is running all over the world,
+bringing us back to the same problem as when your database was in a single
+region.
+
+This is why Nubo has its own data proxy deployed to all the regions that Nubo
+SQL is available.
+
+</Accordion>
+
+<Accordion title="Do we really need compliance (GDPR)?">
+
+Unless you want to get fined because you stored an EU citizen's data in a
+non-GDPR compliant region, then yes, you do need to think about compliance. GDPR
+isn't the only data privacy regulation that exists. California has the
+[California Consumer Privacy Act](https://oag.ca.gov/privacy/ccpa) (CCPA),
+Brazil has
+[LGPD](https://iapp.org/resources/article/brazilian-data-protection-law-lgpd-english-translation),
+and many more countries/territories are beginning to adopt their own data
+privacy policies/regulations/laws. These policies can also come with hefty fines
+for non-compliance. This is why we as developers need to make sure we have full
+control over what data goes where.
+
+Nubo is built with compliance in mind, allowing you to choose where the data is
+stored, so that when the time comes for a data access requests or audits, you
+can take the necessary actions to remain compliant.
+
+</Accordion>
+
+</AccordionGroup>

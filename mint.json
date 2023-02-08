@@ -1,0 +1,70 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "TBD",
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#00A4FF",
+    "light": "#8AD5FF",
+    "dark": "#0370AC"
+  },
+  "api": {
+    "baseUrl": "https://api.nubo.app",
+    "auth": {
+      "method": "key",
+      "name": "x-api-key"
+    }
+  },
+  "topbarCtaButton": {
+    "name": "Get Early Access",
+    "url": "https://nubohq.typeform.com/to/Iq00G4no"
+  },
+  "topbarLinks": [
+    {
+      "name": "Home",
+      "url": "https://nubo.app/"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "API Reference",
+      "icon": "rectangle-terminal",
+      "url": "api-reference"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Welcome",
+      "pages": ["introduction"]
+    },
+    {
+      "group": "Resources",
+      "pages": [
+        {
+          "group": "Tests",
+          "pages": ["tests/test1", "tests/test2", "tests/test3", "tests/test4"]
+        },
+        "resources/what-else",
+        "resources/faq",
+        {
+          "group": "Learn More",
+          "pages": [
+            "resources/what-about/mongodb-atlas",
+            "resources/what-about/google-cloud-spanner",
+            "resources/what-about/faunadb"
+          ]
+        },
+        "resources/whats-next"
+      ]
+    },
+    {
+      "group": "API Reference",
+      "pages": ["api-reference/add-list-items", "api-reference/get-list-items"]
+    }
+  ],
+  "backgroundImage": "/images/background.png",
+  "footerSocials": {
+    "website": "https://nubo.app/",
+    "twitter": "https://twitter.com/NuboHQ",
+    "medium": "https://medium.com/nubohq"
+  }
+}
