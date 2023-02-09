@@ -61,7 +61,6 @@
       "pages": ["api-reference/add-list-items", "api-reference/get-list-items"]
     }
   ],
-  "backgroundImage": "/images/background.png",
   "footerSocials": {
     "website": "https://tbd.sh",
     "github": "https://github.com/tbdjs"
