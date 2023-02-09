@@ -1,5 +1,5 @@
 ---
-title: 'TBD'
+title: 'TBD Docs'
 description: 'Debug production JavaScript apps in real time.'
 ---
 
@@ -12,37 +12,6 @@ Debugging code in production is difficult. When a user experiences a problem wit
   icon="circle-play"
   href="https://tbd.sh"
 />
-
-## What is the edge?
-
-In the world of building web applications, there are many different types of
-architectures to choose from. You have choices such as servers, containers,
-JAMStack, fully static websites, serverless, and lately, the edge.
-
-Before we dive in, let's discuss what "the edge" actually is. Put simply, it's
-having your code distributed on many servers around the world, then routing a
-user's request to the closest deployment. This means that your users experience
-low latency access to your apps no matter where they are located in the world.
-
-I've read many articles that talk about the edge being the future of cloud
-computing. Platforms such as Cloudflare, Vercel, and Deno have made great
-strides towards this becoming a reality. Cloudflare has Workers, Vercel edge
-middleware and edge functions, and Deno allowing you to run Deno and WebAssembly
-at the edge. Promises of low latency, high scalability, and zero cold starts,
-are things that many of us could benefit from for our web applications and these
-companies offer great solutions on the way to getting us there.
-
-At first glance it can seem like the edge is going to make your applications run
-faster because code is being executed close to your users, however, a very
-important aspect is often omitted when discussing the edge, and that is the
-data.
-
-Why does data need to be at the edge? Most applications these days will have
-some aspect of data storage to deal with. In the case of edge apps, even if your
-code is globally distributed and executed at the edge, having your database in a
-single region can actually make overall response times slower compared to having
-everything (code and data) in a single region, because round trips between your
-app and your database can add significant latency.
 
 ## Performance
 
